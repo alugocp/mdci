@@ -7,13 +7,21 @@
   --tan:#f4b081;
 }
 body{
-  font-family:sans-serif;
   color:var(--black);
   overflow-x:hidden;
+  font-family:Lato;
   font-size:1.5rem;
   overflow-y:auto;
   padding:0;
   margin:0;
+}
+@font-face{
+  src:url("Lato-Regular.ttf");
+  font-family:Lato;
+}
+@font-face{
+  src:url("Alata-Regular.ttf");
+  font-family:Alata;
 }
 
 /* Main content structure */
@@ -68,7 +76,7 @@ body{
   padding:15px;
   padding-left:50px;
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:800px){
   .content{
     grid-template-columns:100%;
     padding:75px 0;
@@ -84,9 +92,8 @@ body{
 /* Navigation */
 .navigation{
   background-color:rgba(255,255,255,0.9);
-  font-family:serif;
   padding:30px 10px;
-  font-size:2rem;
+  font-family:Alata;
   position:fixed;
   width:100vw;
   z-index:3;
@@ -96,19 +103,21 @@ body{
 .navigation .title{
   border-bottom:solid 2px var(--black);
   margin-right:50px;
+  font-family:serif;
   color:var(--black);
   font-weight:bold;
+  font-size:2.2rem;
 }
 .navigation a{
   text-decoration:none;
   color:var(--blue);
   margin-right:25px;
-  font-size:1.5rem;
+  font-size:1.6rem;
 }
 .navigation a:hover{
   border-bottom:solid 4px var(--tan);
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:800px){
   .navigation{
     text-align:center;
     position:relative;
@@ -122,6 +131,7 @@ body{
 .splash-content{
   transform:translate(-50%,-50%);
   position:absolute;
+  font-family:Alata;
   text-align:center;
   width:80vw;
   left:50%;
@@ -139,7 +149,7 @@ body{
 .splash-content .highlight{
   color:var(--black);
 }
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:800px){
   .splash-content{
     width:100%;
     top:50%;
@@ -154,11 +164,13 @@ body{
 
 /* General use content elements */
 h1{
+  font-family:Alata;
   color:var(--blue);
   font-weight:bold;
   font-size:2.2rem;
 }
 h2{
+  font-family:Alata;
   font-weight:normal;
   color:var(--blue);
   font-size:2rem;
@@ -173,6 +185,7 @@ h2{
   margin-bottom:10px;
 }
 .gold{
+  font-family:Alata;
   color:var(--gold);
 }
 .gold img,img.check{
@@ -197,4 +210,19 @@ h2{
   color:var(--gold);
   font-size:2rem;
   margin-top:85px;
+}
+.email .input{
+  min-width:calc(75% - 20px);
+  border:solid 2px #d9d9d9;
+  background-color:white;
+  margin-bottom:25px;
+  border-radius:5px;
+  position:relative;
+  padding:5px 10px;
+  font-size:18px;
+  display:block;
+}
+.email .input::placeholder{
+  font-family:Lato;
+  color:#444444;
 }
